@@ -23,9 +23,10 @@
 .navbarLogo span{
     position: fixed;
     color: #E50914;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     cursor: pointer;
+    /* font-family: 'Bebas Neue'; */
 }
 
 .navbarLogo img{
