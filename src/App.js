@@ -7,15 +7,17 @@ import Login from './components/Login/Login';
 import { auth } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
+import Profile from './components/Profile/Profile';
 // import Banner from './components/Banner/Banner';
 
 function App() {
   const user = useSelector(selectUser);
+  // const user = null;
   const dispatch = useDispatch();
 
-  useEffect(()=>{
-    const unsubscribe = auth.onAuthStateChanged((userAuth)=>{
-      if(userAuth){
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
         console.log(userAuth.email);
         console.log(userAuth.uid);
         dispatch(
@@ -25,25 +27,25 @@ function App() {
           })
         )
       }
-      else{
+      else {
         //Logout
-        dispatch(logout);
+        dispatch(logout());
         // console.log("logout");
       }
     });
     return unsubscribe;
-  },[])
+  }, [dispatch])
 
   return (
     <div className="App">
       <BrowserRouter>
-      {
-        !user ? <Login /> : <Routes>
-        <Route exact path='/' element={<Home />} />
-        {/* <Route exact path='/test' element={<Banner />} /> */}
-      </Routes>
-      }
-        
+        {
+          !user ? <Login /> : <Routes>
+            <Route path='/profile' element={<Profile />} />
+            <Route exact path='/' element={<Home />} />
+          </Routes>
+        }
+
       </BrowserRouter>
       {/* <Home /> */}
     </div>
