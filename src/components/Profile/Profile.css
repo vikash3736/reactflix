@@ -1,0 +1,55 @@
+.profile{
+    height: 100vh;
+    color: white;
+}
+
+.profileBody{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* background-color: aliceblue; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8%;
+    max-width: 800px;
+}
+
+.profileBody > h1{
+    font-size: 60px;
+    font-weight: 400;
+    border-bottom: 1px solid grey;
+    margin-bottom: 20px;
+}
+
+.profileContent{
+    display: flex;
+}
+
+.profileContent > img{
+    height: 100px;
+}
+
+.profileDetails{
+    color: white;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.profileDetails > h2{
+    background-color: gray;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.signOutBtn{
+    padding: 10px 20px;
+    color: white;
+    background-color: #E50914;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5%;
+    width: 100%;
+    border-radius: 5px;
+}

@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <Navbar />
             <Banner />
-            <Row title='NETFLIX ORIGINAL' fetchUrl={requests.fetchTrending} isLargeRow />
+            <Row title='REACTFLIX ORIGINAL' fetchUrl={requests.fetchTrending} isLargeRow />
             <Row title='Top Rated' fetchUrl={requests.fetchTopRated} isLargeRow />
             <Row title='Action Movies' fetchUrl={requests.fetchActionMovies} isLargeRow />
             <Row title='Comedy Movies' fetchUrl={requests.fetchComedyMovies} isLargeRow />
