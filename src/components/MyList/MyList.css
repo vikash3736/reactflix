@@ -1,6 +1,8 @@
 .myList{
     color: white;
     padding-top: 5%;
+    /* background-color: gray; */
+    height: 100vh;
 }
 
 .myListPoster{
@@ -8,6 +10,10 @@
     overflow-y: hidden;
     overflow-x: scroll;
     padding: 20px;
+}
+
+.myListPoster::-webkit-scrollbar{
+    display: none;
 }
 
 .myListDetails{
@@ -23,4 +29,19 @@
     font-size: 1rem;
     border: none;
     outline: none;
+}
+
+.empty{
+    color: white;
+    position: absolute;
+    top: 18%;
+    padding: 100px 100px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 35%;
+    font-weight: 600;
+    border: none;
+    font-size: 48px;
+    background-color: #E50914;
+    box-shadow: 10px 10px 5px #aaaaaa;
 }

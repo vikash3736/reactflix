@@ -38,7 +38,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
             (isLargeRow && movie.poster_path) || (!isLargeRow && movie.backdrop_path)
           ) && (
             <img className={`rowPoster ${isLargeRow && "rowPosterLarge"}`} key={movie.id} src={`${baseUrl}${isLargeRow ? movie.poster_path : movie.backdrop_path
-            }`} alt={movie.name} onClick={()=>send(movie)} />
+            }`} alt={movie.name} onClick={()=>send(movie)} style={{cursor:"pointer"}} />
           ))
         }
       </div>
