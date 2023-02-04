@@ -8,6 +8,7 @@ import { auth } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
 import Profile from './components/Profile/Profile';
+import MyList from './components/MyList/MyList';
 // import Banner from './components/Banner/Banner';
 
 function App() {
@@ -41,7 +42,8 @@ function App() {
       <BrowserRouter>
         {
           !user ? <Login /> : <Routes>
-            <Route path='/profile' element={<Profile />} />
+            <Route exact path='/mylist' element={<MyList />} />
+            <Route exact path='/profile' element={<Profile />} />
             <Route exact path='/' element={<Home />} />
           </Routes>
         }

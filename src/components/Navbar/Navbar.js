@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { wishList } from '../../features/wishSlice';
 import './Navbar.css';
 
 const Navbar = () => {
 
     const [show,handleShow] = useState(false);
+
+    const getdata = useSelector(wishList);
+    console.log(getdata);
 
     const navigate = useNavigate();
 

@@ -1,0 +1,26 @@
+.myList{
+    color: white;
+    padding-top: 5%;
+}
+
+.myListPoster{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.myListDetails{
+    flex-direction: column;
+}
+
+.myListDetails > button{
+    margin-left: 15%;
+    width: 70%;
+    padding: 10px 5px;
+    color: white;
+    background-color: #E50914;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}

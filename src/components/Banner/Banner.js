@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react'
 import './Banner.css'
 import axios from '../../api/axios.js'
 import requests from '../../api/requests';
+import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
+
+  const navigate = useNavigate();
 
   const [movie,setMovie] = useState([]);
 
@@ -39,7 +42,7 @@ const Banner = () => {
         </h1>
         <div className="bannerButtons">
           <button className='bannerBtn'>Play</button>
-          <button className='bannerBtn'>My List</button>
+          <button className='bannerBtn' onClick={()=>navigate("/mylist")}>My List</button>
         </div>
         <div className="bannerDescription">
           {truncate(`${movie?.overview}`,200)}
