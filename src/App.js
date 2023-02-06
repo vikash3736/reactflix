@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
 import Profile from './components/Profile/Profile';
 import MyList from './components/MyList/MyList';
+import Player from './components/Player/Player';
 // import Banner from './components/Banner/Banner';
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
       <BrowserRouter>
         {
           !user ? <Login /> : <Routes>
+            <Route exact path='/player' element={<Player />} />
             <Route exact path='/mylist' element={<MyList />} />
             <Route exact path='/profile' element={<Profile />} />
             <Route exact path='/' element={<Home />} />

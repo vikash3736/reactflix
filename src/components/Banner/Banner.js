@@ -41,7 +41,7 @@ const Banner = () => {
           { movie?.title || movie?.name || movie?.original_name }
         </h1>
         <div className="bannerButtons">
-          <button className='bannerBtn'>Play</button>
+          <button className='bannerBtn' onClick={()=> navigate("/player")}>Play</button>
           <button className='bannerBtn' onClick={()=>navigate("/mylist")}>My List</button>
         </div>
         <div className="bannerDescription">
